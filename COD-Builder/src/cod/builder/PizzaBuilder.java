@@ -62,7 +62,8 @@ public class PizzaBuilder {
 
     }
 
-   //metodo que devuelve 
+   //metodo que devuelve una pizza
+    //este metodo se usa para crear una pizza manual
     public Pizza crearPizzaManual() {
 
         return new Pizza(grHarina, mlAgua, grSal, mlAceite, tipoAceite, grTomate, grQueso, tipoQueso, grPinha);

@@ -22,7 +22,8 @@ public class Pizza {
     private String tipoQueso;
     private float grPinha;
 
-    
+    //metodo con las variables 
+    //las final son variables "obligatorias"
     public Pizza(final float grHarina, final float mlAgua, float grSal, float mlAceite, String tipoAceite, float grTomate, float grQueso, String tipoQueso, float grPinha) {
         this.grHarina = grHarina;
         this.mlAgua = mlAgua;
