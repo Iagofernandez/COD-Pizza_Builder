@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package cod.builder;
 
 /**
@@ -10,27 +6,26 @@ package cod.builder;
  * @author User
  */
 public class PizzaBuilder {
+ //inicializar los atributos opcionales con un valor arbitrario
+    private float grHarina;
+    private float mlAgua;
+    private float grSal = 0;
+    private float mlAceite = 0;
+    private String tipoAceite = "";
+    private float grTomate = 0;
+    private float grQueso = 0;
+    private String tipoQueso = "";
+    private float grPinha = 0;
 
-   
-   
-     private float grHarina,mlAgua,grSal,mlAceite,grTomate,grQueso,grPinha;
-    private String tipoAceite,tipoQueso;
+   //este constructor contiene atributos minimos
+    public PizzaBuilder(final float grHarina, final float mlAgua) {
 
-    PizzaBuilder(int i, int i0) {
-      
-    }
-//metodos que devuelven una PizzaBuilder
-    //los return this son para introducir los setters
-    public PizzaBuilder setGrHarina(float grHarina) {
         this.grHarina = grHarina;
-       return this;
-    }
-
-    public PizzaBuilder setMlAgua(float mlAgua) {
         this.mlAgua = mlAgua;
-        return this;
+
     }
 
+    //setters para los atributos
     public PizzaBuilder setGrSal(float grSal) {
         this.grSal = grSal;
         return this;
@@ -38,6 +33,11 @@ public class PizzaBuilder {
 
     public PizzaBuilder setMlAceite(float mlAceite) {
         this.mlAceite = mlAceite;
+        return this;
+    }
+
+    public PizzaBuilder setTipoAceite(String tipoAceite) {
+        this.tipoAceite = tipoAceite;
         return this;
     }
 
@@ -51,27 +51,22 @@ public class PizzaBuilder {
         return this;
     }
 
-    public PizzaBuilder setgrPinha(float grPinha) {
-        this.grPinha = grPinha;
-        return this;
-    }
-
-    public PizzaBuilder setTipoAceite(String tipoAceite) {
-        this.tipoAceite = tipoAceite;
-        return this;
-    }
-
     public PizzaBuilder setTipoQueso(String tipoQueso) {
         this.tipoQueso = tipoQueso;
         return this;
     }
-    //con este createPizza se crea los objetos de tipo Pizza
-    //retorna la Pizza 
-    public Pizza crearPizza(){
-    return new Pizza(this.grHarina,this.mlAgua,this.grSal,this.mlAceite,this.grTomate,this.grQueso,this.grPinha,this.tipoAceite,this.tipoQueso);
+
+    public PizzaBuilder setGrPinha(float grPinha) {
+        this.grPinha = grPinha;
+        return this;
+
     }
 
-    
-    }
-    
+   //metodo que devuelve 
+    public Pizza crearPizzaManual() {
 
+        return new Pizza(grHarina, mlAgua, grSal, mlAceite, tipoAceite, grTomate, grQueso, tipoQueso, grPinha);
+
+    }
+
+}

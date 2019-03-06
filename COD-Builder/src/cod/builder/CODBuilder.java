@@ -16,8 +16,15 @@ public class CODBuilder {
      */
     public static void main(String[] args) {
          //crear un nuevo objeto de tipo Pizza Hawaiana
-         Pizza miPizzaHawaiana= new PizzaBuilder(3,4).setgrPinha(4F).setTipoAceite("Oliva").setGrQueso(9).setTipoQueso("Gouda").crearPizza(); 
-        System.out.println(miPizzaHawaiana); 
+           Pizza hawaiana = new PizzaBuilderAuto(100, 150).setGrSal(5).setMlAceite(90)
+                .setTipoAceite("Virger").setgrPinha(10).createPizza();
+
+        Pizza pizzaMiBuilder = new PizzaBuilder(500, 450)
+                .setTipoAceite("Extra")
+                .setGrSal(100)
+                .crearPizzaManual(); 
+        
+         
     }
     
 }
